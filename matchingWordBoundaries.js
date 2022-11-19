@@ -11,4 +11,4 @@ var Regex_Pattern = /__________/; //Do not delete '/'. Replace __________ with y
 
 
 
-Regex_Pattern = /^[aeiouAEIOU][a-zA-Z]*\b/;
+Regex_Pattern = /\b[aeiouAEIOU][a-zA-Z]*\b/; 
