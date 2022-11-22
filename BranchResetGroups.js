@@ -37,8 +37,14 @@ function main() {
     // Java     ^\\d{2}(---|-|\\.|:)(\\d{2}\\1){2}\\d{2}$
     inputString = readLine();
 
-}
-function main2() {
   const RegExString = /^\d\d(---|-|\.|:)(?:\d\d\1){2}\d\d$/.test(readLine());
   console.log(String(RegExString));
+
+  // OR
+
+  console.log( /^\d{2}((---)|-|\.|:)\d{2}(\1\d{2}){2}$/.test(readLine()) )
+}
+
+function main2() {
+  console.log(/^\d{2}((---)|(-)|(.)|(:))\d{2}\1\d{2}\1\d{2}$/.test(readLine()))
 }
