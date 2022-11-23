@@ -38,7 +38,7 @@ function main() {
 
     const re = /^(tac){2,}((tic)(?!tic)(tac)*)+$/
     // ?! is a negative lookahead
-    // +$ is a positive lookahead
+    // + is a greedy quantifier
     const S = readLine();
     console.log(re.test(S) ? 'true' : 'false');
 
