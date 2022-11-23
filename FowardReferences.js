@@ -34,9 +34,8 @@ function main() {
     // not working /^(tac(tac)*tic(tac)*)+$/ 1 error
     // not working /^(tac(tac)*tic(tac)*|tac(tac)*tac(tac)*)$/ 3 errors
     // not working /tac((tactic)|(tac))*$/ 2 errors
-
-
-    const re = /^(tac){2,}((tic)(?!tic)(tac)*)+$/
+    // works /^(tac){2,}((tic)(?!tic)(tac)*)+$/
+    const re = /^(tac)(tactic|tac)+$/; // best solution
     // ?! is a negative lookahead
     // + is a greedy quantifier
     const S = readLine();
