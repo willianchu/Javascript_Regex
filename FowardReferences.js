@@ -30,7 +30,16 @@ function readLine(): string {
 
 function main() {
     // Enter your code here
-    const re = /^(tac(tac)*tic(tac)*|tac(tac)*tac(tac)*)$/;
+    // not working /^(\2tic|(tac))+$/ 3 errors
+    // not working /^(tac(tac)*tic(tac)*)+$/ 1 error
+    // not working /^(tac(tac)*tic(tac)*|tac(tac)*tac(tac)*)$/ 3 errors
+    // not working /tac((tactic)|(tac))*$/ 2 errors
+
+
+    const re = /^(tac){2,}((tic)(?!tic)(tac)*)+$/
+    // ?! is a negative lookahead
+    // +$ is a positive lookahead
     const S = readLine();
     console.log(re.test(S) ? 'true' : 'false');
+
 }
