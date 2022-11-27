@@ -1,7 +1,7 @@
 // Task
 
 // You have a test String S.
-// Write a regex which can match all the occurrences of digit which are immediately preceded by odd digit.
+// Write a regex which can match all the occurrences of characters which are not immediately preceded by vowels (a, e, i, u, o, A, E, I, O, U).
 
 'use strict';
 
@@ -26,8 +26,7 @@ function readLine(): string {
 
 function main() {
     // Enter your code here
-    const re = /(?<=[13579])\d/g; // preceded by an odd digit
+    const re = /(?<![aeiouAEIOU])./g; // not preceded by a vowel
     const S = readLine();
     console.log("Number of matches :", S.match(re).length);
-
 }
