@@ -199,3 +199,221 @@ function main() {
     
 }
 
+
+// process.stdin.resume();
+// process.stdin.setEncoding("ascii");
+// process.stdin.on("data", function (input) {
+// 	input = input.split('\n').slice(1).join('');
+// 	var r = /<\s*a\s*href=['"]([^'"]+)['"][^>]*>\s*(.*?)\s*(?=<\s*\/\s*a>)<\s*\/\s*a>/ig;
+// 	var url = new Array(), title = new Array();
+// 	input = input.match(r);
+// 	for (i=0, j=input.length; i<j; i+=1) {
+// 		url[i] = input[i].replace(r, '$1');
+// 		title[i] = input[i].replace(r, '$2');
+// 		var tmp = title[i].match(/(?:<[^>]+>)*((?!<))/ig);
+// 		for (ii=0, jj=tmp.length; ii<jj; ii+=1) {
+// 			if (tmp[ii] !== '') {
+// 				title[i] = title[i].replace(tmp[ii], '');
+// 			}
+// 		}
+// 		console.log(url[i]+','+title[i]);
+// 	}
+// });
+
+// function main(input) {
+// 	var link, anme, result = [], tmp,
+// 		txt = input.replace(/[\r\n]/g, '');
+
+// 	txt = txt.replace(/<\s*/g, '<');
+// 	txt = txt.replace(/\s*>/g, '>');
+// 	tmp = txt.match(/<a\s+.*?\/a>/g);
+	
+// 	tmp.forEach(function(line) {
+// 		link = /href\s*=\s*"(.*?)"/.exec(line)[1].trim();
+// 		tmp = />([^<>]+)</.exec(line);
+// 		name = '';
+// 		if (tmp) 
+// 			name = tmp[1].trim();
+		
+// 		result.push(link + ',' + name);
+// 	});
+
+// 	return result.join('\r\n');
+// }
+
+// process.stdin.resume();
+// process.stdin.setEncoding("ascii");
+// process.stdin.on("data", function (input) {
+// 	process.stdout.write(main(input.trim()));
+// });
+
+// function processData(input) {
+//     let matches = [...input.matchAll(/href=\w*$/g)]
+//     console.log(matches)
+// } 
+
+// process.stdin.resume();
+// process.stdin.setEncoding("ascii");
+// _input = "";
+// process.stdin.on("data", function (input) {
+//     _input += input;
+// });
+
+// process.stdin.on("end", function () {
+//    processData(_input);
+// });
+
+// function processData(input) {
+//     //Enter your code here
+//     console.log(s.match(/(?<=[>])[a-zA-Z]+(?=[<])/g));
+//     console.log(s.match(/http.*(?=["])/g));
+// } 
+
+// process.stdin.resume();
+// process.stdin.setEncoding("ascii");
+// _input = "";
+// process.stdin.on("data", function (input) {
+//     _input += input;
+// });
+
+// process.stdin.on("end", function () {
+//    processData(_input);
+// });
+
+// function processData(input) {
+//     //Enter your code here
+//     var lines = input.split('\n');
+//     var N = parseInt(lines.shift(), 10);
+//     var text = lines.join(' ');
+
+//     var domainREStr = 'https?://(?:ww[a-zA-Z0-9_-]+\\.)?([a-zA-Z0-9_-]+(?:\\.[a-zA-Z0-9_-]+)+)[/?"\']';
+//     var re = new RegExp(domainREStr, 'ig');
+
+//     var domains = {};
+//     var arr = null;
+//     while ((arr = re.exec(text)) != null) {
+//         domains[arr[1].trim()] = 0;
+//     }
+    
+//     console.log(domains);
+// } 
+
+// process.stdin.resume();
+// process.stdin.setEncoding("ascii");
+// _input = "";
+// process.stdin.on("data", function (input) {
+//     _input += input;
+// });
+
+// process.stdin.on("end", function () {
+//    processData(_input);
+// });
+
+// function processData(input) {
+//     //Enter your code here
+// } 
+
+// process.stdin.resume();
+// process.stdin.setEncoding("ascii");
+// _input = "";
+// process.stdin.on("data", function (input) {
+//     _input += input;
+// });
+
+// process.stdin.on("end", function () {
+//    processData(_input);
+// });
+// Var output=[];
+// input.replace(regex,function(_,href,text){ 
+//     output.push(href.trim()+','+text.replace(/<.*?>/g,'').trim())
+// });
+// console.log(output.join('\n'));
+
+// function processData(input) {
+//     //Enter your code here
+//     var regex=/<a.*?href="(.*?)".*?>(.*?)<\/a>/ig;
+//     var output=[];
+//     input.replace(regex,function(_,href,text){ 
+//     output.push(href.trim()+','+text.replace(/<.*?>/g,'').trim())
+// });
+//     console.log(output.join('\n'));``
+// } 
+
+// process.stdin.resume();
+// process.stdin.setEncoding("ascii");
+// _input = "";
+// process.stdin.on("data", function (input) {
+//     _input += input;
+// });
+
+// process.stdin.on("end", function () {
+//    processData(_input);
+// });
+
+// function processData(input) {
+//     //Enter your code here
+//     var regex=/<a.*?href="(.*?)".*?>(.*?)<\/a>/ig;
+// var output=[];
+// input.replace(regex,function(_,href,text){ 
+//     output.push(href.trim()+','+text.replace(/<.*?>/g,'').trim())
+// });
+// console.log(output.join('\n'));
+// } 
+
+// process.stdin.resume();
+// process.stdin.setEncoding("ascii");
+// _input = "";
+// process.stdin.on("data", function (input) {
+//     _input += input;
+// });
+
+// process.stdin.on("end", function () {
+//    processData(_input);
+// });
+
+// function processData(input) {
+//     //Enter your code here
+//     var regex=/<a.*?href="(.*?)".*?>(.*?)<\/a>/ig;
+//     var output=[];
+//     input.replace(regex,function(_,href,text){ 
+//     output.push(href.trim()+','+text.replace(/<.*?>/g,'').trim())
+//     });
+//     console.log(output.join('\n'));
+// } 
+
+// function processData(input) {
+//     var regex=/<a.*?href="(.*?)".*?>(.*?)<\/a>/ig;
+//     var output=[];
+//     input.replace(regex,function(_,href,text){ 
+//         output.push(href.trim()+','+text.replace(/<.*?>/g,'').trim())
+//     });
+//     console.log(output.join('\n'));
+//     } 
+
+//     const regex = /<a[^>]*href="([\w\d\/:&;,%~@#';!\?=\.\+\[\]\*\(\)]+)"[^>]*>(?:<[^a][^>]*>)*([^<>]*)(?:<[^a][^>]*>)*<\/a>/gi;
+// function processData(input) {
+//     var m;
+//     do {
+//         m = regex.exec(input);
+//         if (m) console.log(m[1].trim() + "," + (m.length >= 3 ? m[2] : '').trim());
+//     } while (m);
+// } 
+
+// function processData(input) {
+//     var regex=/<a.*?href="(.*?)".*?>(.*?)<\/a>/ig;
+//     var output=[];
+//     input.replace(regex,function(_,href,text){ 
+//         output.push(href.trim()+','+text.replace(/<.*?>/g,'').trim())
+//     });
+//     console.log(output.join('\n'));
+// } 
+
+// function processData(input) {
+//     var regex=/<a.*?href="(.*?)".*?>(.*?)<\/a>/ig;
+//     var output=[];
+//     input.replace(regex,function(_,href,text){ 
+//         output.push(href.trim()+','+text.replace(/<.*?>/g,'').trim())
+//     });
+//     console.log(output.join('\n'));
+// } 
+
