@@ -47,21 +47,21 @@ function main() {
     //     console.log(match[1] + ',' + match[2].trim());
     // }
 
-       
-    const results = [];
-    const re = /<a .*?href=\"([^\"]+)\"[^>]*>(?:\s*<[^>]+>)*(.*?)</g;
-    const n = parseInt(readLine(), 10);
-    let html = '';
-    for (let i = 0; i < n; i++) {
-        html += readLine();
-    }
-    let match;
-    while ((match = re.exec(html)) !== null) {
-        results.push(match[1] + ',' + match[2].trim());
-    }
-    for(let i = 0; i < results.length; i++) {
-        console.log(results[i]);
-    }
+    // 1 error fail in case 5 
+    // const results = [];
+    // const re = /<a .*?href=\"([^\"]+)\"[^>]*>(?:\s*<[^>]+>)*(.*?)</g;
+    // const n = parseInt(readLine(), 10);
+    // let html = '';
+    // for (let i = 0; i < n; i++) {
+    //     html += readLine();
+    // }
+    // let match;
+    // while ((match = re.exec(html)) !== null) {
+    //     results.push(match[1] + ',' + match[2].trim());
+    // }
+    // for(let i = 0; i < results.length; i++) {
+    //     console.log(results[i]);
+    // }
 
 
 
