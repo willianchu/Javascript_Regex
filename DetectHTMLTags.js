@@ -25,6 +25,13 @@ function readLine(): string {
 function main() {
     // Enter your code here
     const regex: RegExp = /<\s*([a-z][a-z0-9]*)\b[^>]*>/gi;
+    // <\s* matches the characters < followed by zero or more whitespace characters
+    // <([a-z][a-z0-9]*)\b[^>]*> - matches the opening tag
+    // ([a-z][a-z0-9]*) - matches the tag name
+    // \b[^>]*> - matches the rest of the tag
+    // g - global
+    // i - case insensitive
+
     const n: number = parseInt(readLine().trim(), 10);
     let html: string = '';
     for (let i: number = 0; i < n; i++) {
@@ -35,8 +42,10 @@ function main() {
     const tags: string[] = [];
     if (matches) {
         matches.forEach((match: string) => {
-            tags.push(match.replace(/<\s*([a-z][a-z0-9]*)\b[^>]*>/gi, '$1'));
+            tags.push(match.replace(/<\s*([a-z][a-z0-9]*)\b[^>]*>/gi, '$1')); 
         });
     }
     console.log(tags.sort().join(';'));
+    // unique results
+    console.log([...new Set(tags)].sort().join(';'));
 }
