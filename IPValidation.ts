@@ -21,9 +21,9 @@ function readLine(): string {
 
 function main() {
     // Regex to validate IPv4 address
-    const ipv4Regex: RegExp = new RegExp(" ^((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$ ");
+    const ipv4Regex: RegExp = new RegExp("^(([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\.){3}([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])$");
     // Regex to validate IPv6 address
-    const ipv6Regex: RegExp = new RegExp(" ^([0-9a-fA-F]{1,4}:){7}[0-9a-fA-F]{1,4}$ ");
+    const ipv6Regex: RegExp = new RegExp("^(?:[a-f0-9]{1,4}:){7}[a-f0-9]{1,4}$");
     
     const n: number = parseInt(readLine().trim(), 10);
     
