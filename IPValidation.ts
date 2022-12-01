@@ -27,12 +27,13 @@ function main() {
     
     const n: number = parseInt(readLine().trim(), 10);
     
+    // "Neither" is the default output
+    let result: string = "Neither";
     
     for (let i: number = 0; i < n; i++) {
-        // "Neither" is the default output
-        let result: string = "Neither";
-        
+        result = "Neither";
         const ip: string = readLine().trim();
+
         
         if (ipv4Regex.test(ip)) {
             result = "IPv4";
