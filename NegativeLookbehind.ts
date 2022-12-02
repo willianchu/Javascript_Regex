@@ -26,7 +26,9 @@ function readLine(): string {
 
 function main() {
     // Enter your code here
-    const re = /(?<![aeiouAEIOU])./g; // not preceded by a vowel
-    const S = readLine();
+    const regex: RegExp = /(?<![aeiouAEIOU])./g;
+    // const re = /(?<![aeiouAEIOU])./g; // not preceded by a vowel
+    const S: string = readLine();
+    // const S = readLine();
     console.log("Number of matches :", S.match(re).length);
 }
