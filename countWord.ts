@@ -26,19 +26,18 @@ function main() {
     for(let i: number = 0; i < n; i++) {
       sentences.push(readLine().trim());
     }
+
     let count: number = 0;
     const m: number = parseInt(readLine().trim(), 10);
     for(let i: number = 0; i < m; i++) {
       count = 0;
       const word: string = readLine().trim();
       for(let j: number = 0; j < n; j++) {
-        // using regex to match the word
         const regex: RegExp = new RegExp(`\\b${word}\\b`, 'gi');
-        console.log(sentences[j].match(regex));
-        if(sentences[j].match(regex)) {
-          count++;
+        const matches: RegExpMatchArray | null = sentences[j].match(regex);
+        if(matches) {
+          count += matches.length;
         }
-          
       }
       console.log(count);
     }
