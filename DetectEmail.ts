@@ -27,14 +27,16 @@ function main() {
       const line: string = readLine();
       if(regex.test(line)) {
           console.log("quick");
-          let result = line.match(regex);
-          console.log(result);
-        answer += result + ';';
+          answer += line.match(regex) + ';';
       console.log(answer);
       }
       
       
   }
-
-  return answer;
+  //remone last ;
+  answer = answer.slice(0, -1);
+  return answer.split(';').sort().join(';');
 }
+
+bd@tnmbonline.com;customerservice@tnmbonline.com;ibd@tnmbonline.com;nricell@tnmbonline.com;tmbankhi@sancharnet.in
+bd@tnmbonline.com;customerservice@tnmbonline.com;ibd@tnmbonline.com;nricell@tnmbonline.com;ttn_tmbankhi@sancharnet.in
