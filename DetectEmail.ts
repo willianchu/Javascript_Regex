@@ -20,15 +20,16 @@ function readLine(): string {
 }
 
 function main() {
-    const numberLines: number = parseInt(readLine().trim(), 10);
+        const numberLines: number = parseInt(readLine().trim(), 10);
     const regex: RegExp = /([a-zA-Z0-9]+)@([a-zA-Z0-9]+)\.([a-zA-Z0-9]{1,3})/g;
     let answer: string = '';
     for (let i: number = 0; i < numberLines; i++) {
       const line: string = readLine();
-      let email = regex.exec(line);
-      console.log(email );
-      if(regex.test(line) != null) {
-        answer += line.match(regex) + ';';
+      if(regex.test(line)) {
+          console.log("quick");
+          let result = line.match(regex);
+          console.log(result);
+        answer += result + ';';
       console.log(answer);
       }
       
