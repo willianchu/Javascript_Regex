@@ -22,6 +22,12 @@ function readLine(): string {
 function main() {
         const numberLines: number = parseInt(readLine().trim(), 10);
     const regex: RegExp = /([a-zA-Z0-9_-]+)@([a-zA-Z0-9]+)\.([a-zA-Z0-9]{1,3})/g;
+    // passed in 2 cases 0 and 1
+    // const regex: RegExp = /([a-zA-Z0-9_-]+)@([a-zA-Z0-9]+)\.([a-zA-Z0-9]{1,3})/g;
+    // passed in 3 cases in cases 0 1 3
+    // const regex: RegExp = /\b(?:\w+\.)*\w+@(?:\w+\.)+\w+/;
+    // const regex: RegExp = /[\w\.]+@\w+\.[\.\w]*\w/g;
+    // const regex: RegExp =[\w_\.]+@[\w_\.]+\.[a-z]{2,3};
     let answer: string = '';
     for (let i: number = 0; i < numberLines; i++) {
       const line: string = readLine();
