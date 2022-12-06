@@ -28,6 +28,8 @@ function main() {
     // const regex: RegExp = /\b(?:\w+\.)*\w+@(?:\w+\.)+\w+/;
     // const regex: RegExp = /[\w\.]+@\w+\.[\.\w]*\w/g;
     // const regex: RegExp =[\w_\.]+@[\w_\.]+\.[a-z]{2,3};
+    // const regex: RegExp = \b[\w\.]+@\w+\.[\w\.]+\b;
+    // const regex: RegExp = /\b([.a-zA-Z0-9_\/]*@[a-zA-Z0-9_\/]*\.[a-zA-Z0-9_\/.]*)\b/g;
     let answer: string = '';
     for (let i: number = 0; i < numberLines; i++) {
       const line: string = readLine();
