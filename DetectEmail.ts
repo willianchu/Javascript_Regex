@@ -1,7 +1,14 @@
+// The rules are :
+
+// 1. It should be of format : <local-part>@<domain-part>
+// 2. Local-part can contain Alphanumeric-character or .(dot)
+// 3. Domain-part can contain Alphanumeric-character or .(dot)
+
 // not only word characters but "." can also be present in the part before @
 
 // emails ending in "." are not acceptable. for example "abc.fds@wohoo.co.in." is not acceptable
 // 'use strict';
+
 
 process.stdin.resume();
 process.stdin.setEncoding('utf-8');
@@ -23,8 +30,12 @@ function readLine(): string {
 }
 
 function main() {
-        const numberLines: number = parseInt(readLine().trim(), 10);
-    const regex: RegExp = /[.\w]+@\w+(?:.\w+)+/g;
+    
+    const numberLines: number = parseInt(readLine().trim(), 10);
+    
+    const regex: RegExp = /\b[\w\.]+@\w+\.[\w\.]+\b/g;
+    
+
     // passed in 2 cases 0 and 1
     // const regex: RegExp = /([a-zA-Z0-9_-]+)@([a-zA-Z0-9]+)\.([a-zA-Z0-9]{1,3})/g;
     // passed in 3 cases in cases 0 1 3
