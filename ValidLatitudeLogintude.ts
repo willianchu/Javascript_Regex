@@ -24,8 +24,9 @@ function main() {
     const n = parseInt(readLine().trim(), 10);
     // For a valid (latitude, longitude) pair:
     // -90<=X<=+90 and -180<=Y<=180.
-    // X and Y can have any digits after decimal point.
-    const regexLatitude = /^[(]?([+-]?([1-8]?\d(\.\d+)?|90(\.0+)?)),\s([+-]?((1[0-7]\d)|([1-9]?\d))(\.\d+)?)[)]?$/;
+    // X and Y can have or not any digits after decimal point.
+    // can accept only integers as coordinates
+    const regexLatitude = /^[(]?[-+]?([1-8]?\d(\.\d+)?|90(\.0+)?)[, ]+[-+]?((1[0-7]\d)|([1-9]?\d))(\.\d+)?[)]?$/;
     for (let i = 0; i < n; i++) {
         const input = readLine().trim();
         console.log(regexLatitude.test(input) ? 'Valid' : 'Invalid');
