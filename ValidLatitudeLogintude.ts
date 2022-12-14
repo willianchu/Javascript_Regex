@@ -21,4 +21,12 @@ function readLine(): string {
 
 function main() {
     // Enter your code here
+    const n = parseInt(readLine().trim(), 10);
+    // For a valid (latitude, longitude) pair:
+    // -90<=X<=+90 and -180<=Y<=180.
+    const regexLatitude = /^[(](-?([1-8]?[0-9]|90)),\s(-?([1]?[0-7][0-9]|180|[0-9]?[0-9]))[)]$/;
+    for (let i = 0; i < n; i++) {
+        const input = readLine().trim();
+        console.log(regexLatitude.test(input) ? 'Valid' : 'Invalid');
+    }
 }
