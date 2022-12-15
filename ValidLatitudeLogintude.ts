@@ -26,7 +26,17 @@ function main() {
     // -90<=X<=+90 and -180<=Y<=180.
     // X and Y can have or not any digits after decimal point.
     // can accept only integers as coordinates
-    const regexLatitude = /^[(]?[-+]?([1-8]?\d(\.\d+)?|90(\.0+)?)[, ]+[-+]?((1[0-7]\d)|([1-9]?\d))(\.\d+)?[)]?$/;
+
+    const regexLatitude = /^\([\-+]?(?:[0-8]\d?(?:\.\d+)?|90(?:\.0+)?),\s[\-+]?(?:(?:\d{2}|1[0-7]\d)(?:\.\d+)?|180(?:\.0+)?)\)$/;
+    // [\+-]? - optional sign
+    // (?:[0-8]\d?(?:\.\d+)?|90(?:\.0+)?) - latitude
+    // (?:\.\d+)? - optional decimal point and digits	
+    // |90(?:\.0+)? - or 90 and optional decimal point and digits
+    // \s - space
+    // [\+-]? - optional sign
+    // (?:(?:\d{2}|1[0-7]\d)(?:\.\d+)?|180(?:\.0+)?) - longitude
+    // \) - closing parenthesis
+
     for (let i = 0; i < n; i++) {
         const input = readLine().trim();
         console.log(regexLatitude.test(input) ? 'Valid' : 'Invalid');
