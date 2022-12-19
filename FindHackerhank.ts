@@ -27,4 +27,22 @@ function readLine(): string {
 // d- Print -1 if none of the above.
 function main() {
     // Enter your code here
+    const n: number = parseInt(readLine().trim(), 10);
+    const regex: RegExp = /hackerrank/gi;
+    for (let i: number = 0; i < n; i++) {
+        const line: string = readLine();
+        if (line.match(regex)) {
+            if (line.match(/^hackerrank/gi)) {
+                if (line.match(/hackerrank$/gi)) {
+                    console.log(0);
+                } else {
+                    console.log(1);
+                }
+            } else {
+                console.log(2);
+            }
+        } else {
+            console.log(-1);
+        }
+    }
 }
