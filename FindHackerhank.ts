@@ -28,16 +28,19 @@ function readLine(): string {
 function main() {
     // Enter your code here
     const n: number = parseInt(readLine().trim(), 10);
+    const startRegex: RegExp = /^hackerrank/;
+    const endRegex: RegExp = /hackerrank$/;
     for (let i: number = 0; i < n; i++) {
         const line: string = readLine();
-        if(line.match(/^hackerrank/gi) && line.match(/hackerrank$/gi)) {
+        if(startRegex.test(line) && endRegex.test(line)) {
             console.log(0);
-        }	else if(line.match(/^hackerrank/gi)) {
+        } else if(startRegex.test(line)) {
             console.log(1);
-        }  else if(line.match(/hackerrank$/gi)) {
+        } else if(endRegex.test(line)) {
             console.log(2);
         } else {
             console.log(-1);
         }
+        
     }
 }
