@@ -20,5 +20,32 @@ function readLine(): string {
 }
 
 function main() {
-    // Enter your code here
+  // 1- Sample Input
+  // 2
+  // hackerrank has such a good ui that it takes no time to familiarise its environment
+  // to familiarize oneself with ui of hackerrank is easy
+  // 1
+  // familiarize
+
+  // 2- Sample Output
+  // 2
+
+  const n: number = parseInt(readLine().trim(), 10);
+  const words: string[] = [];
+  for (let i: number = 0; i < n; i++) {
+    words.push(readLine().trim());
+  }
+  const t: number = parseInt(readLine().trim(), 10);
+  for (let i: number = 0; i < t; i++) {
+    let UKWord: string = readLine().trim();
+    let USWord: string = UKWord.replace(/ize/g, 'ise');
+    let count: number = 0;
+    for (let j: number = 0; j < n; j++) {
+      if (words[j] === UKWord || words[j] === USWord) {
+        count++;
+      }
+    }
+    console.log(count);
+  }
+  
 }
