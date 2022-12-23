@@ -27,4 +27,5 @@ function readLine(): string {
 
 function main() {
     // Enter your code here
+    
 }
