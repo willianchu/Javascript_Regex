@@ -28,7 +28,7 @@ function main() {
     const t: number = parseInt(readLine().trim(), 10);
     for (let i: number = 0; i < t; i++) {
       let UKWord: string = readLine().trim();
-      let USWord: string = UKWord.replace(/ou$/, 'o');
+      let USWord: string = UKWord.replace(/ou/, 'o');
       let count: number = 0;
       for (let j: number = 0; j < n; j++) {
         count += words[j].split(' ').filter((word: string) => word === UKWord || word === USWord).length;
