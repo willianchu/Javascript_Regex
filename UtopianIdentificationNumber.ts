@@ -27,5 +27,10 @@ function readLine(): string {
 
 function main() {
     // Enter your code here
-    
+    const n: number = parseInt(readLine().trim(), 10);
+    const regex: RegExp = /^[a-z]{0,3}[0-9]{2,8}[A-Z]{3,}$/;
+    for (let i: number = 0; i < n; i++) {
+        const utopianIdentificationNumber: string = readLine().trim();
+        console.log(regex.test(utopianIdentificationNumber) ? 'VALID' : 'INVALID');
+    }
 }
