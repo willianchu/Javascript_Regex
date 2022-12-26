@@ -1,3 +1,8 @@
+// SSN in India is a PAN number
+// <char><char><char><char><char><digit><digit><digit><digit><char>
+// <char> is an uppercase English alphabet
+// length of PAN is 10
+
 'use strict';
 
 process.stdin.resume();
