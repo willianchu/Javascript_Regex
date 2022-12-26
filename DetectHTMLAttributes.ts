@@ -21,4 +21,23 @@ function readLine(): string {
 
 function main() {
     // Enter your code here
+    const n: number = parseInt(readLine().trim(), 10);
+    const HTML: string[] = [];
+    for (let i: number = 0; i < n; i++) {
+        HTML.push(readLine().trim());
+    }
+    const attributes: { [key: string]: number } = {};
+    const regex: RegExp = /<\w+\s+([a-z]+="[^"]+")/g;
+    for (let i: number = 0; i < n; i++) {
+        const matches: RegExpMatchArray | null = HTML[i].match(regex);
+        if (matches) {
+            for (let j: number = 0; j < matches.length; j++) {
+                const [attribute, value]: string[] = matches[j].split('=');
+                if (!attributes[attribute]) {
+                    attributes[attribute] = 1;
+                }
+            }
+        }
+    }
 }
+
