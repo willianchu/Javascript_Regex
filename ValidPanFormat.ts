@@ -2,6 +2,7 @@
 // <char><char><char><char><char><digit><digit><digit><digit><char>
 // <char> is an uppercase English alphabet
 // length of PAN is 10
+// answer just YES or NO
 
 'use strict';
 
@@ -26,4 +27,10 @@ function readLine(): string {
 
 function main() {
     // Enter your code here
+    const n: number = parseInt(readLine().trim(), 10);
+    const regex: RegExp = /^[A-Z]{5}[0-9]{4}[A-Z]{1}$/;
+    for (let i: number = 0; i < n; i++) {
+      console.log(regex.test(readLine().trim()) ? 'YES' : 'NO');
+    }
+
 }
