@@ -20,7 +20,17 @@ function readLine(): string {
 }
 
 function main() {
-    // Enter your code here
+    const id: number = parseInt(readLine().trim(), 10);
+    
+    for(let i: number = 0; i < id; i++) {
+        const language: string = readLine().trim();
+        if(languages.includes(language)) {
+            console.log('VALID');
+        } else {
+            console.log('INVALID');
+        }
+    }
+
 }
 
 const languages: string[] = [
