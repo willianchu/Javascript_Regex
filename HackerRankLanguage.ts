@@ -33,15 +33,8 @@ function main() {
         const input: string = readLine().trim();
         const code: string = input.split(' ')[0];
         const language: string = input.split(' ')[1];
-        if (regex.test(code) && languages.includes(language)) {
-            console.log('VALID');
-        } else {
-            console.log('INVALID');
-        }
+        console.log((regex.test(code) && languages.includes(language)) ? 'VALID' : 'INVALID');
     }
-    
-
-
 }
 
 const languages: string[] = [
