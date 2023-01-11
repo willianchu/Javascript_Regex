@@ -18,18 +18,29 @@ process.stdin.on('end', function(): void {
 function readLine(): string {
     return inputLines[currentLine++];
 }
+// Sample Input
+// 3
+// 11011 LUA
+// 11022 BRAINFUCK
+// 11044 X
+
+// code + language
 
 function main() {
-    const id: number = parseInt(readLine().trim(), 10);
-    
-    for(let i: number = 0; i < id; i++) {
-        const language: string = readLine().trim();
-        if(languages.includes(language)) {
+    const n: number = parseInt(readLine().trim(), 10);
+    const regex: RegExp = new RegExp('^[1-9][0-9]{4}$');
+    for (let i: number = 0; i < n; i++) {
+        const input: string = readLine().trim();
+        const code: string = input.split(' ')[0];
+        const language: string = input.split(' ')[1];
+        if (regex.test(code) && languages.includes(language)) {
             console.log('VALID');
         } else {
             console.log('INVALID');
         }
     }
+    
+
 
 }
 
