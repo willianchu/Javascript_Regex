@@ -6,7 +6,7 @@ function unionOfSets(setA, setB) {
   return union.size;
 }
 
-const A = new Set([1, 2, 3, 4, 5, 6]);
+const A = new Set([1, 2, 3, 4, 5, 6, 6]);
 const B = new Set([2, 3, 4, 5, 6, 7, 8]);
 
-console.log(unionOfSets(A, B));
+console.log(unionOfSets(A, B)); // answer is 8
