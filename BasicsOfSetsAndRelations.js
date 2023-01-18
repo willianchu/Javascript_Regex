@@ -6,7 +6,7 @@ function unionOfSets(setA, setB) {
   return union.size;
 }
 
-let A = {1,2,3,4,5,6}
-let B = {2,3,4,5,6,7,8}
+const A = new Set([1, 2, 3, 4, 5, 6]);
+const B = new Set([2, 3, 4, 5, 6, 7, 8]);
 
 console.log(unionOfSets(A, B));
