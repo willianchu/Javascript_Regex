@@ -21,3 +21,17 @@ console.log(intersection.size); // Set { 2, 3, 4, 5, 6 }
 // Difference A - B
 const difference = new Set([...A].filter(x => !B.has(x)));
 console.log(difference.size); // Set { 1 }
+
+// Cartesian Product A × B
+let add2new = new Set();
+for(let a of A) {
+  for(let b of B) {
+    add2new.add({a, b});
+  }
+}
+console.log(add2new.size); 
+
+// Refactor Cartesian Product A × B
+const cartesianProduct = new Set([...A].map(a => [...B].map(b => [a, b])).flat());
+// flat is used to return a new array with all sub-array elements concatenated into it recursively up to the specified depth.
+console.log(cartesianProduct.size);
