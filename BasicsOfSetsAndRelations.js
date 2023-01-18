@@ -17,3 +17,7 @@ console.log(union.size); // Set { 1, 2, 3, 4, 5, 6, 7, 8 }
 // Intersection A ∩ B
 const intersection = new Set([...A].filter(x => B.has(x)));
 console.log(intersection.size); // Set { 2, 3, 4, 5, 6 }
+
+// Difference A - B
+const difference = new Set([...A].filter(x => !B.has(x)));
+console.log(difference.size); // Set { 1 }
